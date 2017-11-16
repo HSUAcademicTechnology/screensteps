@@ -97,6 +97,22 @@ ul > li > a:hover
     text-align:                         center;
 }
 
+#hsuHeaderLogo
+{
+    width:                              30%;
+    height:                             auto;
+}
+
+.hsu-humboldt
+{
+    fill: #256918;
+}
+
+.hsu-state-university
+{
+    fill: #87a625;
+}
+
 
 
 .hvr-underline-from-center {
@@ -439,6 +455,11 @@ hr .styled-hr
         top:                            4.5em;
         font-size:                      1.5em;
     }
+
+    #hsuHeaderLogo
+    {
+        width:                              50%;
+    }
 }
 @media all and (max-width: 349px)
 {
@@ -446,6 +467,11 @@ hr .styled-hr
     {
         top:                            4.7em;
         font-size:                      1.35em;
+    }
+
+    #hsuHeaderLogo
+    {
+        width:                              50%;
     }
 }
 
