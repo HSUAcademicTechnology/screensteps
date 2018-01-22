@@ -15,6 +15,10 @@ jQuery(document).ready(function() {
 		sidebar.prepend(jQuery('#manual-pdf'));
 		sidebar.prepend(jQuery('#sidebar-chapters'));
 	};
+    if (jQuery('.screensteps-content-wrapper.site-index').length)
+    {
+		$('#space-tags-list').remove();
+	};
 
     $( ".screensteps-site-logo" ).remove();
 });

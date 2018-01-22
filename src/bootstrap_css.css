@@ -6,13 +6,16 @@
 
     --navbar-text-color:                white;
     --navbar-text-hover:                #f8caa5;
-    --navbar-fontsize:                  1.25em;
+    --navbar-fontsize:                  1.15em;
 
 
 
-    --image-canvas-instructor:          url('http://www2.humboldt.edu/canvas/screensteps_assets/canvas_logo_instructor.svg');
-    --image-canvas-student:             url('http://www2.humboldt.edu/canvas/screensteps_assets/canvas_logo_student.svg');
-    --image-background:                 url('http://www2.humboldt.edu/canvas/screensteps_assets/campus.png');
+    /* First two not used */
+    /*--hsu-header-logo:                  url('https://users.humboldt.edu/kjwalker/screensteps/imgs/hsu_logo.svg');
+    --hsu-ceege-logo:                   url('https://users.humboldt.edu/kjwalker/screensteps/imgs/ceege_logo.svg');*/
+    --image-canvas-instructor:          url('https://www2.humboldt.edu/canvas/screensteps_assets/canvas_logo_instructor.svg');
+    --image-canvas-student:             url('https://www2.humboldt.edu/canvas/screensteps_assets/canvas_logo_student.svg');
+    --image-background:                 url('https://www2.humboldt.edu/canvas/screensteps_assets/campus.png');
 }
 
 
@@ -29,6 +32,7 @@ ul > li > a:hover
     color:                              #0c4301;
 }
 
+/* To have custom icons, font awesome icons need to be overriden */
 .fa-bicycle:before
 {
     background-image:                   var(--image-canvas-instructor);
@@ -50,13 +54,7 @@ ul > li > a:hover
 
 
 
-#site_logo
-{
-    background-color:                   white;
-    width:                              60%;
-    height:                             auto;
-}
-
+/* id for element involved with site title */
 #header-content
 {
     background:                         var(--image-background);
@@ -82,40 +80,34 @@ ul > li > a:hover
     opacity:                            1.0;
 }
 
-#campus_img
+/* HSU header logo */
+#hsu-header-logo/* Not sure if still needed */
 {
-    background-size:                    cover;
-    width:                              100%;
-    height:                             25em;
-
-    opacity:                            0.7;
-}
-
-.company_title
-{
-    margin-top:                         4em;
-    text-align:                         center;
-}
-
-#hsuHeaderLogo
-{
+    position:                           relative;
     width:                              100%;
     height:                             auto;
+    vertical-align:                     middle;
 }
-
-.hsu-humboldt
+#hsu-humboldt
 {
-    fill: #256918;
+    fill:                               #256918;
 }
-
-.hsu-state-university
+#hsu-state-university
 {
-    fill: #87a625;
+    fill:                               #87a625;
+}
+
+/* padding for svgs in the header to prevent being flush with screen top */
+.svg-top-padding
+{
+    padding-top:                        15px;
 }
 
 
 
-.hvr-underline-from-center {
+/* animated menu bar underline */
+.hvr-underline-from-center
+{
     display:                            inline-block;
     vertical-align:                     middle;
     -webkit-transform:                  translateZ(0);
@@ -195,7 +187,7 @@ ul > li > a:hover
     -webkit-transform:                  scaleX(1);
     transform:                          scaleX(1);
 }
-/* Fix bootstrap */
+/* used to fix bootstraps interaction errors with underline animation */
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-menu > li > a:active
 {
     background:                         none;
@@ -209,6 +201,7 @@ ul > li > a:hover
 
 
 
+/* screensteps search bar and border */
 .screensteps-main-search
 {
     margin-top:                         -18em;
@@ -231,6 +224,7 @@ ul > li > a:hover
 
 
 
+/* bootstrap navbar overrides */
 .navbar
 {
     background-color:                   var(--navbar-background-color);
@@ -277,6 +271,7 @@ ul > li > a:hover
     border-top-color:                   var(--navbar-toggle-color);
 }
 
+/* custom toggler with x animation */
 .navbar .navbar-toggler
 {
     position:                           relative;
@@ -290,21 +285,20 @@ ul > li > a:hover
 }
 .navbar-toggler span
 {
-   display:                             block;
-   background-color:                    var(--navbar-text-color);
-   height:                              3px;
-   width:                               25px;
-   margin-top:                          4px;
-   margin-bottom:                       4px;
-   -webkit-transform:                   rotate(0deg);
-   -moz-transform:                      rotate(0deg);
-   -o-transform:                        rotate(0deg);
-   transform:                           rotate(0deg);
-   position:                            relative;
-   left:                                0;
-   opacity:                             1;
+    display:                            block;
+    background-color:                   var(--navbar-text-color);
+    height:                             3px;
+    width:                              25px;
+    margin-top:                         4px;
+    margin-bottom:                      4px;
+    -webkit-transform:                  rotate(0deg);
+    -moz-transform:                     rotate(0deg);
+    -o-transform:                       rotate(0deg);
+    transform:                          rotate(0deg);
+    position:                           relative;
+    left:                               0;
+    opacity:                            1;
 }
-
 .navbar-toggler span:nth-child(1),
 .navbar-toggler span:nth-child(3)
 {
@@ -313,7 +307,6 @@ ul > li > a:hover
    -o-transition:                       transform .35s ease-in-out;
    transition:                          transform .35s ease-in-out;
 }
-
 .navbar-toggler:not(.collapsed) span:nth-child(1)
 {
     position:                           absolute;
@@ -325,14 +318,12 @@ ul > li > a:hover
     transform:                          rotate(135deg);
     opacity:                            0.9;
 }
-
 .navbar-toggler:not(.collapsed) span:nth-child(2)
 {
     height:                             12px;
     visibility:                         hidden;
     background-color:                   transparent;
 }
-
 .navbar-toggler:not(.collapsed) span:nth-child(3)
 {
     position:                           absolute;
@@ -344,7 +335,6 @@ ul > li > a:hover
     transform:                          rotate(-135deg);
     opacity:                            0.9;
 }
-
 .navbar .navbar-collapse,
 .navbar .navbar-form
 {
@@ -370,7 +360,7 @@ ul > li > a:hover
     background:                         #f1f1f1;
     overflow:                           visible;
 }
-#footer-wrap .wsite-footer h2
+#footer-wrap .site-footer h2
 {
     font-size:                          0.80em;
     font-family:                        'Lato', sans-serif;
@@ -378,7 +368,7 @@ ul > li > a:hover
     text-transform:                     uppercase;
     color:                              #666666;
 }
-.wsite-footer
+.site-footer
 {
     margin:                             0 auto;
     width:                              100%;
@@ -386,23 +376,23 @@ ul > li > a:hover
     box-sizing:                         border-box;
     padding:                            2.5em;
 }
-.wsite-footer div.paragraph
+.site-footer div.paragraph
 {
     font-size:                          0.813em;
 }
-.wsite-footer p
+.site-footer p
 {
     font-size:                          0.813em;
 }
-.wsite-footer a
+.site-footer a
 {
     color:                              #b0b0b0;
 }
-.wsite-footer blockquote
+.site-footer blockquote
 {
     font-size:                          0.813em;
 }
-#main-content .wsite-footer
+#main-content .site-footer
 {
     padding:                            2em;
 }
@@ -425,27 +415,21 @@ hr .styled-hr
     margin:                             0 0;
     text-align:                         center
 }
-.wsite-theme-dark hr.styled-hr
-{
-    background-color:                   #333;
-    background-color:                   rgba(255,255,255,0.13);
-    border:                             0pt none;
-    color:                              #333;
-    color:                              rgba(255,255,255,0.13);
-    height:                             0.1em;
-    margin:                             0 auto;
-    text-align:                         center;
-    box-shadow:                         0.1em -0.1em 0.1em rgba(0,0,0,0.3)
-}
 
 
 
+/* screen resolution fixes */
 @media all and (max-width: 699px) and (min-width: 500px)
 {
     #header-content .site-title
     {
         top:                            3em;
         font-size:                      2em;
+    }
+
+    #hsu-header-logo
+    {
+        width:                              100%;
     }
 }
 @media all and (max-width: 499px)and (min-width: 350px)
@@ -456,9 +440,9 @@ hr .styled-hr
         font-size:                      1.5em;
     }
 
-    #hsuHeaderLogo
+    #hsu-header-logo
     {
-        width:                              50%;
+        width:                              100%;
     }
 }
 @media all and (max-width: 349px)
@@ -469,9 +453,9 @@ hr .styled-hr
         font-size:                      1.35em;
     }
 
-    #hsuHeaderLogo
+    #hsu-header-logo
     {
-        width:                              50%;
+        width:                              100%;
     }
 }
 
